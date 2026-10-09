@@ -1,5 +1,7 @@
 # An MCP-based Chatbot | 一个基于 MCP 的聊天机器人
 
+> **NanoCam note**: This directory is the xiaozhi AI firmware of the ESP32-NanoCam project, adapted from the open-source project [xiaozhi-esp32](https://github.com/78/xiaozhi-esp32) (MIT). **The upstream README follows below.**
+>
 > **NanoCam 项目说明**：本目录是 ESP32-NanoCam 项目中的小智 AI 固件，基于虾哥的开源项目 [xiaozhi-esp32](https://github.com/78/xiaozhi-esp32)（MIT）适配。**以下是上游原始说明文档。**
 
 （中文 | [English](README_en.md) | [日本語](README_ja.md)）
