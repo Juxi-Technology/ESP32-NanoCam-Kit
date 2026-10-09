@@ -69,8 +69,6 @@
 |------|------|
 | [适配计划](适配计划.md) | 产品定位、双Agent战略、竞品分析 |
 | [固件架构设计](固件架构设计.md) | 分区表、任务规划、内存、DMA |
-| [硬件原理图-NanoCamModule](NanoCamModule_原理图.md) | 核心板原理图 |
-| [硬件原理图-NanoCamBASE](NanoCamBASE_原理图.md) | 底板原理图 |
 | [BOARD BRINGUP](BOARD_BRINGUP.md) | 新板子适配指南 |
 | [版本号规范](版本号规范.md) | 语义化版本 + 发布流程 |
 | [固件发布流程](固件发布流程.md) | 发布检查清单 + 步骤 |
