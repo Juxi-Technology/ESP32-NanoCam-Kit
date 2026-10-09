@@ -1,0 +1,31 @@
+# ESP32-NanoCam sdkconfig.defaults
+CONFIG_IDF_TARGET_ESP32S3=y
+CONFIG_ESP32S3_SPIRAM_SUPPORT=y
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80MHZ=y
+
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+
+# Increase HTTP request header buffer (modern browsers send >512 bytes)
+CONFIG_HTTPD_MAX_REQ_HDR_LEN=1024
+
+# Camera SCCB - use legacy I2C driver (GPIO47/48 compatibility with ESP-IDF v5.4)
+CONFIG_SCCB_HARDWARE_I2C_DRIVER_LEGACY=y
+# CONFIG_SCCB_HARDWARE_I2C_DRIVER_NEW is not set
+
+# Default AI mode: 3 = Color Detection (0=Stream, 1=Cat, 2=Face, 3=Color, 4=FaceID, 5=QR)
+CONFIG_NANOCAM_DEFAULT_AI_MODE=3
+
+# Face Recognition
+CONFIG_MFN_V1=y
+CONFIG_S8=y
+# CONFIG_S16 is not set
+
+# micro-ROS disabled by default (needs Ubuntu + precompiled libmicroros.a)
+# CONFIG_NANOCAM_ENABLE_ROS is not set
+
+# Partition Table (Custom - 16MB Flash)
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions_nanocam.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions_nanocam.csv"

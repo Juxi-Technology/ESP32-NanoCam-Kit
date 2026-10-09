@@ -1,0 +1,82 @@
+# ESP32-NanoCam 许可协议
+
+> 本项目采用**双层许可**：软件与硬件/文档分别适用不同协议。
+
+---
+
+## 一、软件许可（固件 / 源代码）
+
+**NanoCam Non-Commercial License v1.0**
+
+Copyright (c) 2026 深圳市钜犀科技有限责任公司 (Juxi Technology)
+
+### 允许的行为
+
+个人、教育、研究用途免费使用本软件，包括：
+
+- ✅ 个人学习、研究、DIY 项目
+- ✅ 教育机构教学、实验、课堂演示
+- ✅ 学术研究与论文
+- ✅ 修改、衍生、二次开发（仅限非商业用途）
+- ✅ 在非商业社区分享、传播
+
+### 禁止的行为
+
+未经 Juxi Technology 书面授权，不得：
+
+- ❌ 直接销售本软件或其编译产物
+- ❌ 将本软件集成到商业产品中
+- ❌ 以本软件为核心功能提供商业服务
+- ❌ 将本软件用于营利性培训、咨询
+
+### 商用授权
+
+如需商用，请联系 **pm@juxitech.com** 获取授权。
+
+---
+
+## 二、硬件与文档许可（原理图 / PCB / 结构 / 文档 / 图片）
+
+本项目的全部硬件设计文件、电路原理图、PCB Layout、外观结构设计、文档及图片，均采用 **知识共享署名-非商业性使用 4.0 国际许可协议** 授权。
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh">
+  <img alt="CC BY-NC 4.0" src="https://licensebuttons.net/l/by-nc/4.0/88x31.png" />
+</a>
+
+**Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**
+
+### 您可以自由地
+
+- **共享** — 在任何媒介复制、分发本作品
+- **修改** — 演绎、改编、基于本作品进行创作
+
+### 惟须遵守下列条件
+
+- **署名** — 必须标注来源：**ESP32-NanoCam by Juxi Technology**
+- **非商业性使用** — 不得将本作品用于商业目的
+- **无附加限制** — 不得使用法律条款或技术措施限制他人做许可协议允许的事
+
+> 完整法律文本：https://creativecommons.org/licenses/by-nc/4.0/legalcode.zh-hans
+
+### 受保护的内容包括但不限于
+
+- 电路原理图（NanoCamModule / NanoCamBASE 等）
+- PCB 版图与 Gerber 文件
+- 模块外观结构、尺寸、外形设计
+- 3D 模型与结构图
+- 文档、教程、图片、视频
+
+---
+
+## 三、归属要求
+
+使用、修改或分发本项目的任何内容时，必须：
+
+1. 保留本许可文件
+2. 注明来源：**ESP32-NanoCam by Juxi Technology (https://github.com/Juxi-Technology/ESP32-NanoCam)**
+
+---
+
+## 四、免责声明
+
+THE SOFTWARE AND HARDWARE DESIGNS ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

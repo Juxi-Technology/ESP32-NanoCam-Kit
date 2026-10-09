@@ -1,0 +1,69 @@
+menu "NanoCam Configuration"
+
+    choice NANOCAM_CAMERA_SENSOR
+        prompt "Camera Sensor Model"
+        default NANOCAM_CAMERA_GC2145
+        help
+            Select the DVP camera sensor connected to the FPC connector.
+
+        config NANOCAM_CAMERA_GC2145
+            bool "GC2145 (2MP, default)"
+        config NANOCAM_CAMERA_OV2640
+            bool "OV2640 (2MP)"
+        config NANOCAM_CAMERA_OV5640
+            bool "OV5640 (5MP)"
+    endchoice
+
+    config NANOCAM_DEFAULT_AI_MODE
+        int "Default AI Mode on Boot"
+        range 0 5
+        default 0
+        help
+            0: Stream (MJPEG only)
+            1: Cat Face Detection
+            2: Human Face Detection
+            3: Color Detection
+            4: Face Recognition
+            5: QR Code Scanner
+
+    config NANOCAM_ENABLE_MQTT
+        bool "Enable MQTT Client"
+        default y
+        help
+            Publish AI detection results via MQTT.
+
+    config NANOCAM_ENABLE_I2C_SLAVE
+        bool "Enable I2C Slave Mode"
+        default y
+        help
+            Respond to I2C register reads from external MCU.
+
+    config NANOCAM_ENABLE_ROS
+        bool "Enable micro-ROS (ROS2 integration)"
+        default y
+        help
+            Publish camera images (/esp32_img) and AI detection
+            results (/esp32_detect) via micro-ROS UDP transport.
+
+    config NANOCAM_ROS_AGENT_IP
+        string "micro-ROS Agent IP"
+        default "192.168.1.100"
+        depends on NANOCAM_ENABLE_ROS
+
+    config NANOCAM_ROS_AGENT_PORT
+        int "micro-ROS Agent Port"
+        default 9999
+        range 1024 65535
+        depends on NANOCAM_ENABLE_ROS
+
+    config NANOCAM_HTTP_PORT
+        int "HTTP Server Port"
+        default 80
+        range 80 65535
+
+    config NANOCAM_WEBSOCKET_PORT
+        int "WebSocket Server Port"
+        default 2080
+        range 1024 65535
+
+endmenu

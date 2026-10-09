@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NanoCam Admin</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#1a1a2e;color:#eee;min-height:100vh}
+header{background:#16213e;padding:16px;text-align:center}
+header h1{font-size:1.3em;color:#e94560}
+.stream{width:100%;max-width:640px;margin:12px auto;display:block;border-radius:8px}
+.panel{max-width:640px;margin:0 auto 16px;padding:12px;background:#16213e;border-radius:8px}
+.panel h2{font-size:1em;margin-bottom:10px;color:#f5c518}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.btn{padding:10px 14px;border:none;border-radius:6px;font-size:.9em;cursor:pointer;font-weight:600}
+.btn-on{background:#4e9f3d;color:#fff}
+.btn-off{background:#e94560;color:#fff}
+.btn-action{background:#533483;color:#fff}
+.card{background:#0f3460;padding:10px;border-radius:6px;margin-top:8px;font-size:.85em}
+input{border:1px solid #555;background:#0f3460;color:#fff;padding:8px 10px;border-radius:6px;flex:1;min-width:120px}
+.ai-mode{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+@media(min-width:500px){.ai-mode{grid-template-columns:1fr 1fr 1fr}}
+</style>
+</head>
+<body>
+<header><h1>NanoCam Admin</h1></header>
+
+<img class="stream" src="/stream" alt="Live">
+
+<div class="panel">
+  <h2>AI Mode</h2>
+  <div class="ai-mode">
+    <button class="btn btn-on" onclick="setMode(0)">Stream</button>
+    <button class="btn btn-action" onclick="setMode(1)">Cat Face</button>
+    <button class="btn btn-action" onclick="setMode(2)">Face Det</button>
+    <button class="btn btn-action" onclick="setMode(3)">Color</button>
+    <button class="btn btn-action" onclick="setMode(4)">Face ID</button>
+    <button class="btn btn-action" onclick="setMode(5)">QR Code</button>
+    <button class="btn btn-off" onclick="reboot()">Reboot</button>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>WiFi Setup</h2>
+  <div class="row">
+    <input id="ssid" placeholder="WiFi Name">
+    <input id="pass" placeholder="Password">
+  </div>
+  <div class="row" style="margin-top:8px">
+    <button class="btn btn-on" onclick="setWiFi()">Save WiFi</button>
+    <button class="btn btn-off" onclick="factoryReset()">Factory Reset</button>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Device Info</h2>
+  <div class="card" id="info">Loading...</div>
+</div>
+
+<script>
+function api(cmd){fetch('/api?cmd='+encodeURIComponent(cmd)).catch(()=>{})}
+function setMode(m){api('ai_mode:'+m)}
+function setWiFi(){var s=document.getElementById('ssid').value;var p=document.getElementById('pass').value;if(s)api('sta_ssid:'+s);if(p)api('sta_pd:'+p)}
+function reboot(){api('nano_reboot')}
+function factoryReset(){api('wifi_reset')}
+fetch('/status').then(r=>r.json()).then(d=>{document.getElementById('info').innerHTML='<b>Ver:</b> '+d.version+' <b>Chip:</b> '+d.chip+' <b>Flash:</b> '+d.flash+' <b>Heap:</b> '+(d.free_heap/1024).toFixed(0)+'KB'}).catch(()=>{})
+</script>
+</body>
+</html>

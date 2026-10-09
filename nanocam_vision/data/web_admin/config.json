@@ -1,0 +1,18 @@
+{
+  "name": "NanoCam Web Admin",
+  "version": "0.1.0",
+  "endpoints": {
+    "stream": "/stream",
+    "status": "/status",
+    "api": "/api?cmd="
+  },
+  "ai_modes": [
+    {"id": 0, "name": "Stream", "icon": "camera"},
+    {"id": 1, "name": "Cat Face", "icon": "pets"},
+    {"id": 2, "name": "Face Det", "icon": "face"},
+    {"id": 3, "name": "Color", "icon": "palette"},
+    {"id": 4, "name": "Face ID", "icon": "fingerprint"},
+    {"id": 5, "name": "QR Code", "icon": "qr_code"},
+    {"id": 6, "name": "LLM Agent", "icon": "smart_toy"}
+  ]
+}
