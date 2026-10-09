@@ -17,6 +17,4 @@ Multi-language tutorials for the ESP32-NanoCam module — the ESP32-S3 dual-mode
 
 Each language folder contains 14 documents: 11 chapters (Ch01–Ch11) plus Quick Start, Serial Protocol Manual and Hardware Spec, and a code-download page.
 
-`files/` holds the shared firmware source archives and tools.
-
 Source of truth: the Chinese version in `zh-hans/`, mirrored from the Juxi Feishu wiki.
