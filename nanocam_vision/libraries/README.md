@@ -44,4 +44,4 @@ cam.set_ai_mode(2)  # 人脸检测
 
 ## 许可
 
-与项目整体一致：非商业用途免费（NanoCam Non-Commercial License v1.0），详见 [LICENSE](../LICENSE)。
+与项目整体一致：MIT License 开源，可自由使用、修改与商用，详见 [LICENSE](../LICENSE)。

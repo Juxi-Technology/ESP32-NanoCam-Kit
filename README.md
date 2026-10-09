@@ -27,7 +27,9 @@ ESP32-S3 双模态 AI 摄像头模组 —— 边缘视觉 AI（离线）+ 云端
 
 ## 许可
 
-- 软件：NanoCam Non-Commercial License v1.0（非商业用途免费，商用请联系 pm@juxitech.com）
-- 硬件与文档：CC BY-NC 4.0
+本项目完全开源：
+
+- 软件（固件 / 源代码）：**MIT License** —— 可自由使用、修改、商用与再分发，只需保留版权声明
+- 硬件与文档（原理图 / 文档 / 图片）：**CC BY 4.0**
 
 详见 [`nanocam_vision/LICENSE`](nanocam_vision/LICENSE)；`nanocam_xiaozhi/` 与 `nanocam_espclaw/` 内保留上游 MIT 许可证；第三方开源组件归属见 [`nanocam_vision/THIRD_PARTY_NOTICES.md`](nanocam_vision/THIRD_PARTY_NOTICES.md)。

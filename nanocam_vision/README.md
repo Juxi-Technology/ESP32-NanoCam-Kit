@@ -26,4 +26,4 @@ idf.py -p <串口> flash monitor
 
 ## 许可
 
-NanoCam Non-Commercial License v1.0 + 硬件/文档 CC BY-NC 4.0，详见 [LICENSE](LICENSE)。第三方组件见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+MIT License（软件）+ CC BY 4.0（硬件/文档），详见 [LICENSE](LICENSE)。第三方组件见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。

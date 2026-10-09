@@ -100,5 +100,5 @@ A: 支持。通过串口发送 `nano_ota:http://your-server/firmware.bin` 即可
 ### Q: 有手机 App 吗？
 A: 可通过浏览器访问 Web 管理后台，或使用第三方 MJPEG 查看器。
 
-### Q: 商业授权怎么获取？
-A: 联系 **pm@juxitech.com**
+### Q: 可以商用吗？
+A: 可以。本项目全开源（软件 MIT / 硬件文档 CC BY 4.0），允许自由商用，只需保留版权声明与署名。
