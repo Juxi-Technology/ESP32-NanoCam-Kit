@@ -4,7 +4,9 @@
 
 Designed and developed by Juxi Technology (深圳市钜犀科技有限责任公司).
 
-This repository contains three firmware projects and their supporting resources:
+**This repository contains three alternative firmwares for the same device — plus multi-language usage tutorials.**
+
+> ⚠️ **Only one firmware can be flashed and used at a time.** The three folders (`nanocam_vision` / `nanocam_xiaozhi` / `nanocam_espclaw`) are three functional variants of firmware for the same ESP32-S3 hardware. Pick the function you need, flash the corresponding firmware, and use it — to switch to another function, re-flash the device with another firmware.
 
 ## Directory Overview
 
@@ -27,6 +29,10 @@ Adapted from the open-source project [xiaozhi-esp32](https://github.com/78/xiaoz
 
 Also based on xiaozhi-esp32 (MIT), with added support for the NanoCam S3CAM board (`bread-compact-wifi-s3cam`), for ESP-Claw hardware.
 
+### tutorials — Multi-language usage tutorials
+
+Step-by-step tutorials in 11 languages (English, 简体中文, 繁體中文, 日本語, 한국어, Deutsch, Français, Español, Italiano, Português BR/PT): quick start, camera basics, edge AI (face / cat face / color / QR code), voice chat, AI vision understanding and ESP-Claw voice control, plus serial protocol manual, hardware spec and firmware downloads. Entry: [`tutorials/README.md`](tutorials/README.md).
+
 ## License
 
 Fully open source:
@@ -44,8 +50,11 @@ ESP32-S3 双模态 AI 摄像头模组 —— 边缘视觉 AI（离线）+ 云端
 
 本仓库包含三个固件项目及配套资料：
 
+> ⚠️ **注意：三个文件夹是同一硬件的三套固件（三个功能），每次只能烧录其中一个使用**；更换功能需要重新烧录对应固件。
+
 - **`nanocam_vision`（主固件，推荐）**：基于 ESP-IDF 的完整功能固件。边缘 AI 视觉（人脸检测 / 人脸识别 / 猫脸检测 / 颜色识别 / 二维码扫描 / 运动检测）+ MJPEG 实时图传；云端智能体（小智 AI 语音对话、ESP-Claw 视觉 Agent）；接口含 HTTP 图传 / Web 管理后台、串口 AT 指令、I2C 从机、MQTT、micro-ROS 2、WS2812；配套 `docs/`（28 篇文档 + 28 章教程）与 `libraries/`（Arduino / Python / STM32 / micro:bit / 树莓派 / Pico 跨平台 SDK）。编译方法见 [`nanocam_vision/README.md`](nanocam_vision/README.md)（需要 ESP-IDF v5.4+）。
 - **`nanocam_xiaozhi`**：基于开源项目 [xiaozhi-esp32](https://github.com/78/xiaozhi-esp32)（MIT）适配的小智 AI 语音助手固件。
 - **`nanocam_espclaw`**：同样基于 xiaozhi-esp32（MIT），新增 NanoCam S3CAM 板卡支持（`bread-compact-wifi-s3cam`），用于 ESP-Claw 硬件。
+- **`tutorials/`（多语言使用教程）**：11 个语种的使用教程（中简 / 中繁 / English / 日本語 / 한국어 / Deutsch / Français / Español / Italiano / Português），从快速上手到人脸识别、语音对话、AI 视觉理解、ESP-Claw 语音控制，附串口协议手册、硬件规格书与代码下载。入口：[`tutorials/README.md`](tutorials/README.md)。
 
 许可：本项目完全开源 —— 软件 MIT（可自由使用、修改、商用，只需保留版权声明），硬件与文档 CC BY 4.0，详见 [`nanocam_vision/LICENSE`](nanocam_vision/LICENSE)；第三方组件归属见 [`nanocam_vision/THIRD_PARTY_NOTICES.md`](nanocam_vision/THIRD_PARTY_NOTICES.md)。
